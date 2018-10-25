@@ -9,6 +9,7 @@ CREATE TABLE products (
   department_name VARCHAR(100) NULL,
   price DECIMAL(10,2) NULL,
   stock_quantity INT NULL,
+  product_sales INT NULL,
   PRIMARY KEY (item_id)
 );
 
@@ -43,3 +44,10 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Vitamins", "health", 18.75, 675);
 
 SELECT * FROM products;
+
+CREATE TABLE departments (
+  department_id INT NOT NULL AUTO_INCREMENT,
+  department_name VARCHAR(100) NULL,
+  over_head_costs DECIMAL(10,2) NULL,
+  PRIMARY KEY (department_id)
+);

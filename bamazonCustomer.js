@@ -67,9 +67,16 @@ function userPrompts() {
                     // console.log(answer.units);
                 });
                     console.log("New Stock Quantity: " + res[0].stock_quantity);
-                var customerPrice = res[0].price * answer.units;
+                    var customerPrice = res[0].price * answer.units;
                     console.log("Your Price: " + customerPrice);
                 }
+                // NOT WORKING :( 
+                connection.query("UPDATE products SET product_sales = product_sales+? WHERE item_id = ? ", 
+                [ customerPrice, answer.id ], function(err, res) {
+                    console.log(res);
+                });
+
+        connection.end();        
         })
     });
 
