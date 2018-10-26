@@ -51,3 +51,13 @@ CREATE TABLE departments (
   over_head_costs DECIMAL(10,2) NULL,
   PRIMARY KEY (department_id)
 );
+
+
+INSERT INTO departments (department_name, department_name, price, stock_quantity)
+VALUES ("Vitamins", "health", 18.75, 675);
+
+
+
+
+
+SELECT * FROM departments;
